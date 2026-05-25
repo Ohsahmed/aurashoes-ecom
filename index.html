@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraShoes | Premium Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .product-card:hover .product-image { transform: scale(1.08); }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-900">
+
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
+            <span class="text-xl font-black tracking-widest text-amber-600">AURA<span class="text-gray-900">SHOES</span></span>
+            <div class="relative">
+                <button id="cart-btn" class="bg-gray-900 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-amber-600 transition">
+                    <span>🛒 Cart</span>
+                    <span id="cart-count" class="bg-amber-500 text-gray-900 text-xs font-bold px-2 py-0.5 rounded-full">0</span>
+                </button>
+                <div id="cart-dropdown" class="hidden absolute right-0 mt-2 w-80 bg-white border border-gray-200 rounded-xl shadow-xl p-4">
+                    <h3 class="font-bold text-gray-800 border-b pb-2 mb-2">Your Items</h3>
+                    <div id="cart-items" class="space-y-2 max-h-48 overflow-y-auto text-sm text-gray-600">
+                        <p class="text-gray-400 text-center py-4">Your cart is empty.</p>
+                    </div>
+                    <div class="border-t pt-2 mt-2 flex justify-between font-bold text-gray-900">
+                        <span>Total:</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                    <button id="clear-cart" class="w-full mt-3 bg-red-500 text-white text-xs py-2 rounded hover:bg-red-600 transition">Clear Cart</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Premium Minimalist Collection</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="product-card bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center">
+                    <span class="text-6xl product-image transition duration-500 ease-in-out">👟</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold text-gray-900">Aura Urban White</h3>
+                    <p class="text-sm text-gray-500 mt-1">Lightweight, handcrafted leather running shoes.</p>
+                    <div class="flex justify-between items-center mt-6">
+                        <span class="text-xl font-black text-gray-900">$120.00</span>
+                        <button onclick="addToCart('Aura Urban White', 120)" class="bg-gray-900 text-white text-sm px-4 py-2 rounded-lg font-medium hover:bg-amber-600 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center">
+                    <span class="text-6xl product-image transition duration-500 ease-in-out">🥾</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold text-gray-900">Desert Nomad Gold</h3>
+                    <p class="text-sm text-gray-500 mt-1">All-weather durable tactical outdoor boots.</p>
+                    <div class="flex justify-between items-center mt-6">
+                        <span class="text-xl font-black text-gray-900">$180.00</span>
+                        <button onclick="addToCart('Desert Nomad Gold', 180)" class="bg-gray-900 text-white text-sm px-4 py-2 rounded-lg font-medium hover:bg-amber-600 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                <div class="h-64 bg-gray-100 overflow-hidden flex items-center justify-center">
+                    <span class="text-6xl product-image transition duration-500 ease-in-out">👠</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold text-gray-900">Aura Midnight Heel</h3>
+                    <p class="text-sm text-gray-500 mt-1">High-end Italian design fashion evening heels.</p>
+                    <div class="flex justify-between items-center mt-6">
+                        <span class="text-xl font-black text-gray-900">$210.00</span>
+                        <button onclick="addToCart('Aura Midnight Heel', 210)" class="bg-gray-900 text-white text-sm px-4 py-2 rounded-lg font-medium hover:bg-amber-600 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
